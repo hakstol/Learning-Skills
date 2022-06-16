@@ -1,6 +1,43 @@
-# Desafio 1 - Menor entre três números
-from operator import index
+from fastapi import FastAPI;
 
+app = FastAPI()
+
+@app.post('/espelha-array')
+def img(a: int, b: int, c: int):
+
+    espelho = [a, b, c]
+    reflexo = [a, b, c]
+
+    reflexo.remove(a)
+    reflexo.append(a)
+
+    reflexo.remove(b)
+    reflexo.append(b)
+
+    reflexo.remove(a)
+    reflexo.append(a)
+
+    return espelho, reflexo
+
+@app.post('/menor-numero')
+def menorNumero(a: int, b: int, c: int):
+
+    if (a < b) & (a < c):
+        return(a)
+    elif (a == b == c):
+        return(a)
+    elif (b < a) & (b < c):
+        return(b)
+    elif (c < a) & (c < b):
+        return(c)
+    elif(a < c) & (b < c):
+        return(a)
+    elif (b < a) & (c < a):
+        return(b)
+    elif (a < b) & (c < b):
+        return(a)
+    
+# Desafio 1 - Menor entre três números
 
 def menorNumero(a, b, c):
 
@@ -22,7 +59,6 @@ def menorNumero(a, b, c):
 # print(menorNumero(1,2,3))
 
 # Desafio 2 - Espelho de um Array
-
 
 def img(a, b, c):
 
@@ -55,8 +91,7 @@ def potenciacao(a, b):
 
 # Desafio 4 - Retornar 2 dias antes (dias úteis)
 
-
-def DU(dia):
+def DU(dia: str):
 
     dias = ['segunda', 'terca', 'quarta', 'quinta', 'sexta']
 
@@ -82,4 +117,4 @@ def DU(dia):
 
     return dia1, dia2
 
-print(DU('quinta'))
+# print(DU('segunda'))
