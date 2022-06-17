@@ -1,42 +1,5 @@
-from fastapi import FastAPI;
+# Desafios Processo Seletivo - IntelliTrader
 
-app = FastAPI()
-
-@app.post('/espelha-array')
-def img(a: int, b: int, c: int):
-
-    espelho = [a, b, c]
-    reflexo = [a, b, c]
-
-    reflexo.remove(a)
-    reflexo.append(a)
-
-    reflexo.remove(b)
-    reflexo.append(b)
-
-    reflexo.remove(a)
-    reflexo.append(a)
-
-    return espelho, reflexo
-
-@app.post('/menor-numero')
-def menorNumero(a: int, b: int, c: int):
-
-    if (a < b) & (a < c):
-        return(a)
-    elif (a == b == c):
-        return(a)
-    elif (b < a) & (b < c):
-        return(b)
-    elif (c < a) & (c < b):
-        return(c)
-    elif(a < c) & (b < c):
-        return(a)
-    elif (b < a) & (c < a):
-        return(b)
-    elif (a < b) & (c < b):
-        return(a)
-    
 # Desafio 1 - Menor entre três números
 
 def menorNumero(a, b, c):
@@ -118,3 +81,4 @@ def DU(dia: str):
     return dia1, dia2
 
 # print(DU('segunda'))
+
