@@ -1,3 +1,3 @@
 <h1>Currently learning</h1>
 
-![My Skills](https://skills.thijs.gg/icons?i=nodejs,py,docker,linux,mysql)
+![My Skills](https://skills.thijs.gg/icons?i=nodejs,py,docker,linux,mysql,flutter)
