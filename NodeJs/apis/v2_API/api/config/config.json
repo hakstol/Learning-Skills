@@ -1,0 +1,25 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": null,
+    "database": "v2_api",
+    "host": "127.0.0.1",
+    "dialect": "postgresql"
+  },
+  "test": {
+    "username": "postgres",
+    "password": null,
+    "database": "v2_api",
+    "host": "127.0.0.1",
+    "dialect": "postgresql"
+  },
+  "production": {
+    "username": "postgres",
+    "password": null,
+    "database": "v2_api",
+    "host": "127.0.0.1",
+    "dialect": "postgresql"
+  }
+}
+
+w_:9464B3Ej444}r3dRQ6jK?AmbC#$^7
